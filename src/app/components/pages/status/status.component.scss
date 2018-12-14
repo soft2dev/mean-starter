@@ -1,0 +1,16 @@
+// == Import necessary partial files from the root styles folder
+@import "../../../../styles/base/functions";
+@import "../../../../styles/base/variables";
+
+// == Component specific style rules
+.text-content {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 560px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.scan-qr-code-holder {
+  margin-top: pxToRem(27, 16);
+  margin-bottom: pxToRem(27, 16);
+}

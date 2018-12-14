@@ -1,0 +1,93 @@
+/**
+* Bootstrap overrides button scss file
+*/
+
+[role="button"] {
+  cursor: pointer;
+}
+
+.btn {
+  min-width: 100px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.btn-lg {
+  min-width: 250px;
+  @include media(">sm") {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.btn-gradient-secondary {
+  background-image: linear-gradient(257deg, #e74c3c, #c0392b);
+  border: solid 1px #c0392b;
+  color: $brand-white !important;
+  -webkit-appearance: inherit !important;
+
+  &:hover {
+    background: linear-gradient(259deg, darken(#e74c3c, 5%), darken(#c0392b, 5%)) !important;
+  }
+}
+
+.btn-gradient-info {
+  background: linear-gradient(259deg, #f1c20f, #f49315) !important;
+  border-color: transparent;
+  color: $brand-white !important;
+  -webkit-appearance: inherit !important;
+
+  &:hover {
+    background: linear-gradient(259deg, darken(#f1c20f, 5%), darken(#f49315, 5%)) !important;
+  }
+}
+
+.btn-disabled {
+  @include button-variant($brand-light-gray, #f5f5f5, #e0e0e0);
+}
+
+// Btn link mixin
+
+@mixin make_btn_link_variant($color, $hover-color: darken($color, 7.5%)) {
+  display: flex;
+  align-items: center;
+  padding: 0 0;
+  background: none;
+  border: 0;
+  color: $color;
+  line-height: 1;
+  outline: 0;
+  text-transform: uppercase;
+  transition: all linear 0.35s;
+
+  @include hover {
+    color: darken($hover-color, 7.5%);
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    color: color-yiq($color);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-link-#{$color} {
+    @include make_btn_link_variant($value, $value);
+  }
+}
+
+.btn-link.has-icon {
+  &.right .icon {
+    margin-left: 0.625rem;
+  }
+
+  &.left .icon {
+    margin-right: 0.625rem;
+  }
+}

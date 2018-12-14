@@ -1,0 +1,23 @@
+<!-- App outer -->
+<div class="app-outer" [ngClass]="{'resize-active': isWindowResize}">
+
+    <!-- Load app header component -->
+    <app-header></app-header>
+    <!-- /.App header component ends -->
+
+    <!-- App main content -->
+    <main id="main" class="main" role="main">
+        <div class="content">
+
+            <!-- Render Routed Content -->
+            <router-outlet></router-outlet>
+            <!-- /.Routed Content ends -->
+
+        </div>
+    </main><!-- /.App main content ends -->
+
+    <!-- Load app footer component -->
+    <app-footer></app-footer>
+    <!-- /. App footer component ends -->
+
+</div><!-- /.App outer ends -->

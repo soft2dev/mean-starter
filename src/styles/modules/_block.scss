@@ -1,0 +1,48 @@
+/**
+ * Reusable block styles
+ */
+
+// == Generating different text spaces
+$block_size_suffix: xs sm lg xlg;
+$block_size_value: 50 70 100 135;
+
+@for $i from 1 through length($block_size_suffix) {
+  .space-y-#{nth($block_size_suffix, $i)} {
+    padding-top: pxToRem(nth($block_size_value, $i), 16);
+    padding-bottom: pxToRem(nth($block_size_value, $i), 16);
+  }
+}
+
+// == Clipped blocks
+.is-clipped {
+  position: relative;
+  margin-top: 6.25rem;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background: $brand-faded;
+    width: calc(115% + 4rem);
+    height: 10rem;
+    transform: skew(48deg) rotate(-4deg);
+  }
+
+  &.top {
+    &::before {
+      top: -6rem;
+    }
+  }
+
+  &.right {
+    &::before {
+      right: -9%;
+      transform: skew(-48deg) rotate(4deg);
+    }
+  }
+}
+
+// == Fluid blocks
+.block--fluid {
+  margin: pxToRem(45, 16) pxToRem(50, 16);
+}

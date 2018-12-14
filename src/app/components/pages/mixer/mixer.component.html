@@ -1,0 +1,203 @@
+<!-- Wider / Fluid layout section -->
+<section class="block block--fluid">
+  <div class="tile-container">
+    <div class="row">
+      <div class="col-sm-8 tile-container__item tile-container__item--lg mb-4 mb-sm-0">
+        <div class="bg-card">
+          <header class="bg-card__header">
+            <h4 class="bg-card__title"><strong>Enter information to mix your Bitcoins</strong></h4>
+          </header>
+          <div class="bg-card__body p-0 border-0">
+            <form class="form mixer-form" [formGroup]="mixerForm">
+
+              <div class="form-content bg-faded mb-3">
+                <div class="form-group form-group-xl">
+                  <h5 class="form-group-title has-icon"><strong>CTemplar Code</strong> <i
+                    class="icon icon-info ml-2"></i></h5>
+                  <label class="form-group-label h6" for="cTemplarCode">You will recive it after first
+                    transaction</label>
+                  <input type="text" class="form-control form-control-w-250" id="cTemplarCode"/>
+                </div>
+
+                <div class="form-group form-group-xl">
+                  <h5 class="form-group-title has-icon"><strong>Reciving Address</strong> <i
+                    class="icon icon-info ml-2"></i></h5>
+                  <label class="form-group-label h6">Where anonymized coins
+                    should come to (up to 8 addresses)</label>
+                  <div class="mixer-form-rows" formArrayName="mixerFormRows">
+                    <div class="input-group input-group-custom ts-repeatable-ui mb-3"
+                         *ngFor="let mixerFormRow of mixerForm.controls.mixerFormRows.controls; let i = index;"
+                         [formGroupName]="i">
+                     <span class="input-group-prepend">
+                       <span class="badge badge-round badge-lg badge-secondary">{{ i + 1 }}</span></span>
+                      <input formControlName="mixeritemname" class="form-control" type="text"
+                             value="4OrPh7ssHUwwE2ZJnqf1WdprwHu5i3tT3e"/>
+                      <span class="input-group-append"><span
+                        class="badge badge-rect badge-secondary text-left">100% <br/> 1h 0m delay</span></span>
+                    </div>
+                  </div>
+                  <div class="input-group input-group-custom ts-repeatable-ui mb-3">
+                     <span class="input-group-prepend">
+                       <span class="badge badge-round badge-lg badge-success">2</span></span>
+                    <input class="form-control" type="text"/>
+                    <span class="input-group-append"><span
+                      class="badge badge-rect badge-success text-left">100% <br/> 2h 0m delay</span></span>
+                  </div>
+                  <button class="btn-link btn-link-secondary text-capitalize" role="button"
+                          type="button" (click)="addNewRow()"><u>+ Add Address</u></button>
+                </div>
+
+                <div class="form-group form-group-xl">
+                  <h5 class="form-group-title has-icon"><strong>Service fee</strong> <i
+                    class="icon icon-info mx-2" placement="top"
+                    ngbTooltip="Tincidunt lobortis feugiat vivamus at augue eget arcu. Cras ornare arcu dui vivamus arcu felis bibendum ut tristique. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Sagittis eu volutpat odio facilisis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat. "></i>
+                    1.0543%</h5>
+                  <label class="form-group-label h6 mb-3 pb-1">Random or custom fee complicates any
+                    attempts of analysis of your financial activity </label>
+                  <div class="matSliderModule-holder">
+                    <mat-slider min="1" max="4" step="1" value="2.5"></mat-slider>
+                    <div class="matSlider-labels d-flex">
+                      <div class="matSlider-label line-height-1">1%</div>
+                      <div class="matSlider-label line-height-1 ml-auto">4%</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group form-group-xl">
+                  <h5 class="form-group-title has-icon"><strong>Transfer Delay</strong> <i
+                    class="icon icon-info ml-2"></i></h5>
+                  <label class="form-group-label h6 mb-3 pb-1">Transfer delay will make it more
+                    difficult
+                    to find any events correlation.</label>
+                  <div class="timeline-view">
+                    <div class="timeline-view-inner">
+                      <div class="timeline-view__bar"></div>
+                    </div>
+                    <div class="timeline-view-label__holder d-flex">
+                      <div class="timeline-view__label line-height-1">Instant</div>
+                      <div class="timeline-view__label line-height-1 ml-auto">24h</div>
+                    </div>
+                    <div class="timeline-view__bubbles">
+                      <div class="timeline-view__bubble">
+                        <span class="badge badge-secondary badge-round badge-md">1</span>
+                        <span class="timeline-view__bubbles-label">1h</span>
+                      </div>
+                      <div class="timeline-view__bubble">
+                        <span class="badge badge-success badge-round badge-md">1</span>
+                        <span class="timeline-view__bubbles-label">2h</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group form-group-xl">
+                  <h5 class="form-group-title has-icon"><strong>Mixing Strength</strong> <i
+                    class="icon icon-info ml-2"></i></h5>
+                  <label class="form-group-label h6 mb-4">Follow recomendation for more effective
+                    mixing</label>
+                  <ngb-progressbar type="warning" [value]="50"><span
+                    class="progress-bar-status">Good</span></ngb-progressbar>
+
+                  <div class="mb-5"></div>
+
+                  <ngb-progressbar type="info" [value]="100"><span
+                    class="progress-bar-status">Strong</span></ngb-progressbar>
+
+                  <div class="mb-5"></div>
+
+                  <ngb-progressbar type="gray" [value]="15"><span
+                    class="progress-bar-status">Low</span></ngb-progressbar>
+                </div>
+              </div>
+
+              <div class="form-content bg-white border-0">
+                <div class="form-group">
+                  <div class="fancy-field-group">
+                    <input class="d-none fancy-field-control fancy-field-control-lg"
+                           id="termsConditionCheckbox" name="[]" type="checkbox" checked/>
+                    <label for="termsConditionCheckbox"><strong>I accept</strong></label>
+                    <a href="" class="btn-link btn-link-primary ml-1"><strong><u>Terms and
+                      Conditions</u></strong></a>
+                  </div>
+                </div>
+                <div class="form-group mb-3">
+                  <div class="fancy-field-group">
+                    <input class="d-none fancy-field-control fancy-field-control-lg"
+                           id="pgpSignedCheckbox" name="[]" type="checkbox" checked/>
+                    <label for="pgpSignedCheckbox"><strong>I accept</strong></label>
+                    <a href="" class="btn-link btn-link-primary ml-1"><strong><u>PGP signed
+                      guarantee for problem resolution</u></strong></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group text-center mb-0">
+                <button class="btn btn-primary btn-sm" type="submit">Mix My Coins</button>
+                <a href="" class="btn btn-secondary btn-sm ml-2" routerLink="/status">Status Page</a>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 tile-container__item tile-container__item--sm">
+        <div class="bg-card pl-md-1">
+          <header class="bg-card__header">
+            <h4 class="bg-card__title"><strong>Fee Calculator</strong></h4>
+          </header>
+          <div class="bg-card__body p-0 border-0">
+            <form class="form mixer-form">
+
+              <div class="form-content bg-faded">
+                <div class="form-group form-group-md">
+                  <h5 class="form-group-title has-icon"><strong>You Send</strong></h5>
+                  <div class="form-inline-group">
+                    <input type="text" class="form-control form-control-w-210 has-mt"/>
+                    <span class="form-inline-append text-uppercase">BTC</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <h5 class="form-group-title has-icon"><strong>You Receive</strong></h5>
+                  <div class="input-group-custom mt-3 mb-1">
+                    <label class="form-group-label h6 mb-0">To</label>
+                    <span class="badge badge-round badge-secondary ml-2">1</span>
+                    <span class="text-dark ml-2">1OrPh7ssHYwwE2ZJnqf1WdprwHu5i3tT3e</span>
+                  </div>
+                  <div class="form-inline-group">
+                    <input type="text" class="form-control form-control-w-210 has-mt"/>
+                    <span class="form-inline-append"><span
+                      class="text-uppercase d-block mb-2">BTC</span>
+                                            <span
+                                              class="d-block text-secondary"><strong>100% in 1h 0m</strong></span></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <h5 class="form-group-title has-icon"><strong>You Receive</strong></h5>
+                  <div class="input-group-custom mt-3 mb-1">
+                    <label class="form-group-label h6 mb-0">To</label>
+                    <span class="badge badge-round badge-success ml-2">2</span>
+                    <span class="text-dark ml-2">4OrPh7ssHUwwE2ZJnqf1WdprwHu5i3tT3e</span>
+                  </div>
+                  <div class="form-inline-group">
+                    <input type="text" class="form-control form-control-w-210 has-mt"/>
+                    <span class="form-inline-append"><span
+                      class="text-uppercase d-block mb-2">BTC</span>
+                                            <span
+                                              class="d-block text-success"><strong>100% in 1h 0m</strong></span></span>
+                  </div>
+                </div>
+
+                <div class="form-group mb-0">
+                  <a href="" class="text-primary">Your personal fee 0.99% + 0.00007809 BTC</a>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

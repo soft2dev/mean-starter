@@ -1,0 +1,18 @@
+/**
+ * Bootstrap overrides modules list
+ */
+
+@import "dropdown";
+@import "button";
+@import "form";
+@import "badge";
+@import "tooltips";
+@import "progress";
+
+// == Contextual colors
+@include text-emphasis-variant(".text-alt", $text-alt);
+@include text-emphasis-variant(".text-disabled", $text-disabled);
+
+// == Background colors
+@include bg-variant(".bg-faded", $brand-faded);
+@include bg-variant(".bg-gray", #6f6f6f);

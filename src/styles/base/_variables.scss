@@ -1,0 +1,262 @@
+/*
+** Variables collection
+*/
+
+// == PATH VARIABLES
+$img_path: 'assets/images/';
+$font_path: 'assets/fonts/';
+
+// == Z-index stack utilities
+$zindex-neg: -1;
+$zindex-low: 0;
+$zindex-normal: 1;
+$zindex-high: 2;
+$zindex-super: 9999;
+
+/**
+* ==============================================================================
+*     Overriding bootstrap's varaibles with own brand's variables
+* ==============================================================================
+*/
+
+//== Colors
+//
+//## Brand colors for use across Bootstrap.
+
+$primary: #34495e;
+$secondary: #e74c3c; //~#091f35;
+$success: #3498db;
+$info: #f79900;
+$warning: #ce4638;
+$danger: #c0392b; //~#FB0F01;
+$brand-white: #ffffff;
+$brand-black: #212121;
+$brand-gray: rgba(0, 0, 0, 0.54);
+$brand-light-gray: rgba(0, 0, 0, 0.38);
+$brand-faded: #fafafa;
+$brand-blue: #3498db;
+$menu-link: rgba(255, 255, 255, 0.7);
+$brand-inverse: $brand-black;
+$brand-blue: #3a4e63;
+$facebook-color: #2D408B;
+$twitter-color: #3299EF;
+$gray-e0e0e0: #e0e0e0;
+$divider-color: #d8d8d8;
+$text-dark: #444444;
+$text-muted-color: #7f7f7f;
+$text-alt: #536779;
+$text-disabled: #a6a6a6;
+
+//
+// Bootstrap's Color system
+//
+
+$gray-800: #232327;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg: $brand-white;
+$body-color: $text-dark;
+//** Global text color on `<body>`.
+$text-color: $brand-gray;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-lato: 'Lato', Helvetica, Arial, sans-serif;
+$font-family-roboto: 'Roboto', Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-lato;
+$font-family-std-base: $font-family-roboto;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+// $small-font-size:    86.6025%;
+$font-size-base: 1rem;
+$font-size-lg: 1rem;
+$small-font-size: 0.75rem;
+
+$h1-font-size: 3.5rem;
+$h2-font-size: 2.875rem;
+$h3-font-size: 2.25rem;
+$h4-font-size: 1.625rem;
+$h5-font-size: 1.125rem;
+$h6-font-size: 0.875rem;
+
+$font-size-sm: 0.75rem;
+
+$headings-line-height: 1.18;
+$line-height-base: 1.5;
+$headings-margin-bottom: 1rem;
+
+//** Unit-less `line-height` for use in components like buttons.
+// $line-height-base:        1.25; // 20/14
+
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+$headings-font-weight: 400;
+$headings-font-family: $font-family-base;
+
+//** Headings small color
+$headings-color: #232327;
+$headings-small-color: $brand-gray;
+
+//** Global textual link color.
+$link-color: $success;
+//** Link hover color set via `darken()` function.
+$link-hover-color: darken($link-color, 15%);
+//** Link hover decoration.
+$link-hover-decoration: none;
+
+//** Text muted color
+$text-muted: $text-muted-color;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 1024px,
+  lg: 1200px,
+  xl: 1440px
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-xs-max-width: 1170px;
+
+$container-max-widths: (
+  xs: $container-xs-max-width,
+);
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-radius: .25rem;
+$border-radius-lg: .375rem;
+$border-radius-sm: .125rem;
+
+// Navbar
+$navbar-light-color: #6b6b6b;
+
+// == Buttons
+
+$btn-padding-y: 0.938rem;
+$btn-padding-x: 0.938rem;
+$btn-padding-x-sm: pxToRem(32, 16);
+$btn-padding-y-sm: pxToRem(12, 16);
+$btn-padding-x-lg: 3.43066rem;
+$btn-border-radius: 2px;
+$btn-font-weight: 600;
+$btn-line-height: 1;
+$btn-border-radius-lg: 2px;
+$btn-border-radius-sm: 2px;
+
+$btn-secondary-bg: $secondary;
+$btn-secondary-color: $brand-white;
+$btn-secondary-border: $secondary;
+$btn-font-weight: 400;
+
+// == Dropdowns
+$dropdown-min-width: 100%;
+$dropdown-margin-top: 0;
+$border-radius: 4px;
+$dropdown-padding-y: 0;
+$dropdown-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.01), 0 5px 32px 10px rgba(0, 0, 0, 0.05);
+$dropdown-item-padding-x: 1.375rem;
+$dropdown-link-active-bg: #f7f7f7;
+$dropdown-link-active-color: $brand-black;
+$dropdown-border-color: #e0e0e0;
+$dropdown-link-hover-bg: $brand-faded;
+
+// == Form fields
+$form-group-margin-bottom: 1.875rem;
+$input-border-color: #e0e0e0;
+$input-border-focus: $input-border-color;
+$input-border-radius: 0;
+$input-border-radius-sm: 0;
+$input-padding-y-sm: 0.406777rem;
+$input-padding-x-sm: 0.938rem;
+$input-padding-y: 0.75rem;
+$input-padding-x: 1rem;
+$input-padding-y-lg: 0.813rem; //~0.938rem;
+$input-padding-x-lg: 1rem;
+$input-border-radius-lg: 4px;
+$input-focus-box-shadow: none;
+$input-focus-color: $primary;
+
+// == Badge
+$badge-font-weight: 400;
+
+// == Modal
+$modal-header-padding: 1.5rem;
+$modal-md: 555px;
+$close-color: rgba(0, 0, 0, 0.54);
+$modal-header-border-width: 1px;
+$modal-inner-padding: null;
+$border-radius-lg: 4px;
+$modal-dialog-margin: 0.938rem;
+
+$modal-lg: inherit;
+$modal-md: inherit;
+$modal-sm: inherit;
+$modal-content-border-width: 0;
+
+// == Close
+$close-font-size: 2rem;
+$close-font-weight: 400;
+
+// == Progressbar
+$progress-bg: #e9e9e9;
+$progress-height: pxToRem(17, 16);
+$progress-bar-bg: $danger;
+$progress-border-radius: 0;
+$progress-font-size: 0.875rem;
+
+// == Tooltips
+$tooltip-bg: #34495e;
+$tooltip-arrow-color: #34495e;
+$tooltip-border-radius: $border-radius-sm;
+$tooltip-opacity: 1;
+$tooltip-padding-y: pxToRem(13, 16);
+$tooltip-padding-x: pxToRem(15, 16);
+$tooltip-arrow-width: pxToRem(20, 16);
+$tooltip-arrow-height: pxToRem(12, 16);
+
+$shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.25);
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+$spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+    (
+      0: 0,
+      1: ($spacer * .375),
+      2: ($spacer * .625),
+      3: ($spacer * 1.125),
+      4: ($spacer * 1.875),
+      5: ($spacer * 2.5),
+      6: ($spacer * 3),
+      7: ($spacer * 3.5),
+      8: ($spacer * 4),
+      9: ($spacer * 4.5),
+      10: ($spacer * 5)
+    ),
+    $spacers
+);

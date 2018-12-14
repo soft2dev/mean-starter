@@ -1,0 +1,23 @@
+/**
+* @partial: _header.scss
+*/
+
+/* =============== Navbar ================ */
+
+.topnavbar {
+  padding: 0.46888rem 1.5rem;
+  background: $brand-faded;
+  border-bottom: 1px solid $gray-e0e0e0;
+  max-height: 4rem;
+}
+
+/* =============== Navbar Brand ================ */
+.navbar__logo {
+  margin-right: 0.5rem;
+  width: 1.75rem;
+}
+
+.navbar__brand-title {
+  font-size: 1rem;
+  line-height: 1;
+}

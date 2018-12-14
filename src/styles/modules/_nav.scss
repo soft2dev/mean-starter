@@ -1,0 +1,55 @@
+/**
+ * Navigation module
+ */
+
+/* =============== Navbar Navigation ================ */
+
+.navbar-nav {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  padding-right: 2.875rem;
+}
+
+.navbar-nav__item {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.navbar-nav__link {
+  color: $navbar-light-color;
+  cursor: pointer;
+  font-size: 0.875rem;
+
+  &:hover {
+    color: darken($navbar-light-color, 5%);
+  }
+}
+
+/* =============== Navbar Dropdowns ================ */
+
+.navbar-nav__item {
+  .dropdown--rect {
+    .dropdown-toggle {
+      height: 3rem;
+      min-width: 4.625rem;
+      max-width: 4.625rem;
+    }
+  }
+
+  .dropdown--sq {
+    .dropdown-toggle {
+      height: 3rem;
+      min-width: 3rem;
+    }
+  }
+
+  .dropdown-toggle {
+    border: 1px solid $gray-e0e0e0;
+    width: 100%;
+
+    .icon {
+      margin-right: 0.25rem;
+      font-size: 1rem;
+    }
+  }
+}

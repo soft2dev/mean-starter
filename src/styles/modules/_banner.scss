@@ -1,0 +1,33 @@
+/**
+ * Banner / Promo module
+ */
+
+.promo{
+  position: relative;
+  overflow: hidden;
+}
+
+.promo__picture-holder {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: percentage(741 / 1922);
+  }
+}
+
+.promo__picture {
+  @include make-full-position(absolute);
+}
+
+.promo__content {
+  padding: 0.938rem;
+  z-index: $zindex-normal;
+}
+
+.promo__subtitle {
+  margin-bottom: 3rem;
+  font-size: 1.875rem;
+}

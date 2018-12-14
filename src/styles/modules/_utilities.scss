@@ -1,0 +1,30 @@
+/**
+ * Utilities styles
+ */
+
+// == Generating different letter spacing
+
+@for $i from 1 through 5 {
+  .letter-spacing-#{$i} {
+    letter-spacing: #{$i}px;
+  }
+}
+
+// == Generating different line height
+
+@for $i from 1 through 5 {
+  .line-height-#{$i} {
+    line-height: #{$i};
+  }
+}
+
+// == Generating different font icon sizes
+
+$icon_size_suffix: xs sm md lg;
+$icon_size_value: 10 16 25 40;
+
+@for $i from 1 through length($icon_size_suffix) {
+  .icon-#{nth($icon_size_suffix, $i)} {
+    font-size: pxToRem(nth($icon_size_value, $i), 16);
+  }
+}

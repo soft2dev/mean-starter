@@ -1,0 +1,177 @@
+/**
+* Fancy form fields styles
+*/
+
+.fancy-field-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+// == Radioboxes
+input[type="radio"].fancy-field-control + label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: 1.625rem;
+  color: $brand-light-gray;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all ease 0.35s;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: "";
+    transform: translateY(-50%);
+    transition: all ease 0.35s;
+  }
+
+  &::before {
+    background: $brand-white;
+    border: 1px solid lighten($brand-light-gray, 50%);
+    border-radius: 50%;
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  &::after {
+    left: 0.25rem;
+    background: transparent;
+    border-radius: 50%;
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+}
+
+// == Checked
+input[type="radio"].fancy-field-control:checked + label {
+  color: $primary;
+
+  &::before {
+    border-color: $primary;
+  }
+
+  &::after {
+    background: $primary;
+  }
+}
+
+input[type="radio"].fancy-field-control-sm + label {
+  padding-left: 1.5rem;
+
+  &::before {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  &::after {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+
+// == Checkboxes
+input[type="checkbox"].fancy-field-control + label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: 1.875rem;
+  color: $brand-light-gray;
+  font-size: 1rem;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all ease 0.35s;
+
+  &.fancy-field-empty {
+    padding: 0 0;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0.25rem;
+    left: 0;
+    content: "";
+    //transform: translateY(-50%);
+    transition: all ease 0.35s;
+  }
+
+  &::before {
+    background: $brand-white;
+    border: 1px solid lighten($brand-light-gray, 50%);
+    border-radius: 2px;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  &::after {
+    top: 0.415rem; //~0.185rem;
+    left: 0.37rem;
+    height: 8px;
+    width: 5px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    transform: rotate(37deg); //~45deg
+  }
+}
+
+input[type="checkbox"].fancy-field-control.checked-type-minus + label {
+  &::after {
+    top: 50%;
+    left: 0.25rem;
+    background: transparent;
+    height: 2px;
+    width: 0.5rem;
+    transform: translateY(-50%) translateX(0) rotate(0deg);
+  }
+}
+
+input[type="checkbox"].fancy-field-control-lg + label.fancy-field-empty {
+  height: 1.25rem;
+  width: 1.25rem;
+
+  &::before {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  &::after {
+    // top: 0.07rem;
+    width: 7px;
+    height: 10px;
+  }
+}
+
+input[type="checkbox"].fancy-field-control-sm + label {
+  &::after {
+    top: 0.36rem;
+    @include media(">sm") {
+      top: 0.25rem;
+    }
+  }
+}
+
+// == Checked
+input[type="checkbox"].fancy-field-control:checked + label {
+  color: $primary;
+
+  &::before {
+    border-color: $primary;
+  }
+
+  &::after {
+    border-color: $primary;
+  }
+}
+
+input[type="checkbox"].fancy-field-control.checked-type-minus:checked + label {
+  &::after {
+    background: $primary;
+  }
+}

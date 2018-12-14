@@ -1,0 +1,20 @@
+/**
+ * Bootstrap progress override
+ */
+
+// Progress Bar
+.progress {
+  overflow: unset;
+}
+
+.progress-bar {
+  position: relative;
+}
+
+.progress-bar-status {
+  position: absolute;
+  bottom: calc(-100% - 8px);
+  left: 50%;
+  color: rgba(0, 0, 0, 0.87);
+  transform: translateX(-50%);
+}

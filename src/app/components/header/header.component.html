@@ -1,0 +1,63 @@
+<!-- App header -->
+<header id="mastHead" class="topnavbar d-flex align-items-center fixed-top" role="banner">
+    <div class="topnavbar__row flex-grow-1">
+
+        <!-- App navigation bar -->
+        <nav class="navbar navbar-expand-lg" role="navigation">
+            <div class="row navbar__row align-items-center">
+
+                <div class="col-3 navbar__col navbar__col--logo">
+                    <figure class="navbar__brand-holder mb-0">
+                        <a class="navbar__brand d-flex align-items-center" routerLink="/">
+                            <img alt="Ctemplar Mixer Brand Logo" class="navbar__logo" src="assets/images/logo.svg" />
+                            <figcaption class="text-primary navbar__brand-title text-uppercase"><strong>CTemplar Mixer</strong></figcaption>
+                        </a>
+                    </figure>
+                </div>
+
+                <div class="col-9 navbar__col navbar__col--menu">
+                    <button aria-controls="ctemplarMixerMenuContent" aria-label="Toggle navigation" class="navbar-toggler d-block d-md-none" data-target="navbar-collapsable-content" role="button">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
+                        Menu
+                    </button>
+                    <div class="navbar-collapsable-content">
+                        <div class="navbar-menu-groups d-flex align-items-center justify-content-end">
+                            <ul class="navbar-nav d-flex align-items-center" role="menu">
+                                <li class="navbar-nav__item">
+                                    <a href="" class="navbar-nav__link text-uppercase">FAQ</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav navbar-nav--actions d-flex align-items-center pr-0">
+                                <li class="navbar-nav__item">
+                                    <div ngbDropdown placement="bottom-right" class="dropdown--rect">
+                                        <button ngbDropdownToggle class="navbar-nav__link bg-white" role="button" type="button" id="navbarLangDropdownMenuButton"><i class="icon icon-globe"></i> En</button>
+                                        <div ngbDropdownMenu aria-labelledby="navbarLangdropdownMenuButton">
+                                            <a class="dropdown-item" href="">En</a>
+                                            <a class="dropdown-item" href="">Ru</a>
+                                            <a class="dropdown-item" href="">Es</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="navbar-nav__item">
+                                    <div ngbDropdown class="dropdown--sq">
+                                        <button ngbDropdownToggle class="navbar-nav__link bg-white no-caret" role="button" type="button" id="navbarMoreOptionsDropdownMenuButton"><i class="icon icon-dots mr-0"></i></button>
+                                        <div ngbDropdownMenu aria-labelledby="navbarMoreOptionsDropdownMenuButton">
+                                            <a class="dropdown-item" href="">En</a>
+                                            <a class="dropdown-item" href="">Ru</a>
+                                            <a class="dropdown-item" href="">Es</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav><!-- /.App navigation bar ends -->
+
+    </div>
+</header><!-- /.App header ends -->

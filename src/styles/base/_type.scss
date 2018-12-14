@@ -1,0 +1,33 @@
+/**
+ * Typography related styles
+ */
+
+// stylelint-disable font-weight-notation
+b,
+strong {
+  //font-weight: 900; // Add the correct font weight in Chrome, Edge, and Safari
+}
+
+// Heading, text, blockquote etc
+
+p, blockquote {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Headings
+
+h5, .h5 {
+  margin-bottom: 0.875rem;
+}
+
+h6, .h6 {
+  margin-bottom: 0.75rem;
+}
+
+// Paras
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.67;
+}

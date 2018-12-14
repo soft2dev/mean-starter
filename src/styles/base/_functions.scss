@@ -1,0 +1,9 @@
+/**
+ * Sass custom functions
+ */
+
+// == Function to convert pixels to rem
+@function pxToRem($input: 16px, $base: 16px) {
+  @return ($input / $base) * 1rem;
+}
+

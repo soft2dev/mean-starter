@@ -1,0 +1,14 @@
+/**
+ * Custom text grid container
+ */
+
+// == Generating different custom container
+
+$container_size_suffix: xs sm md lg;
+$container_size_value: 550 720 800 930;
+
+@for $i from 1 through length($container_size_suffix) {
+  .container--#{nth($container_size_suffix, $i)} {
+    max-width: pxToRem(nth($container_size_value, $i), 16);
+  }
+}

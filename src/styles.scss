@@ -1,0 +1,70 @@
+/* Import partials */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css'; // Importing material design prebuilt theme
+
+/*
+** Import partials from config directory
+*/
+@import '/styles/config/include-media';
+
+/*
+** Import partials from base directory
+*/
+@import '/styles/base/functions';
+@import '/styles/base/variables';
+
+/*
+** Import partials from vendor directory
+*/
+
+@import '/styles/vendors/include-media/include-media';
+@import '/styles/vendors/bootstrap/ctemplar-mixer-bootstrap';
+@import '/styles/vendors/icomoon/icomoon';
+
+/*
+** Import partials from base directory
+*/
+
+@import '/styles/base/type';
+
+/*
+** Import partials from mixin directory
+*/
+
+@import '/styles/mixins/mixins';
+
+/*
+** Import partials from layouts directory
+*/
+
+@import '/styles/layouts/layout';
+@import '/styles/layouts/general';
+@import '/styles/layouts/utilities';
+@import '/styles/layouts/header/header';
+@import '/styles/layouts/footer/footer';
+
+/*
+** Import partials from modules directory
+*/
+
+@import '/styles/modules/nav';
+@import '/styles/modules/container';
+@import 'styles/modules/utilities';
+@import 'styles/modules/block';
+@import 'styles/modules/cards/cards';
+@import '/styles/modules/lists';
+@import '/styles/modules/banner';
+@import '/styles/modules/form-fields';
+@import '/styles/modules/timeline';
+
+/*
+** Import partials from modules->bootstrap directory
+*/
+
+@import '/styles/modules/bootstrap/bootstrap-overrides';
+
+/*
+** Import partials from modules->material-design directory
+*/
+
+@import 'styles/modules/material-design/material-overrides';

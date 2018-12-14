@@ -1,0 +1,58 @@
+/**
+ * Reusable card module
+ */
+
+// == Default card
+.card {
+  position: relative;
+  display: flex;
+  min-height: 1px;
+}
+
+.card__img-holder {
+  margin-bottom: 2rem;
+}
+
+.card--features {
+  .card__body {
+    max-width: pxToRem(310, 16);
+  }
+
+  .card__img-holder {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: pxToRem(122, 16);
+  }
+}
+
+.card.has-feature-icon {
+  .card__body {
+    max-width: pxToRem(270, 16);
+  }
+
+  .card__picto {
+    position: absolute;
+    top: 4.5rem;
+    right: 0;
+
+    &.pushed-right {
+      right: -2rem;
+    }
+  }
+}
+
+.card__title {
+  line-height: 0.92;
+}
+
+// == Bg card
+.bg-card__title {
+  margin-bottom: pxToRem(26, 16);
+}
+
+.bg-card__body,
+.form-content {
+  padding: pxToRem(30, 16) pxToRem(35, 16) pxToRem(40, 16);
+  border: 1px solid $brand-faded;
+}
